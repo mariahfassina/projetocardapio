@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardapio</title>
+    <style>
+      body{
+        background-color: rgb(255, 255, 255);
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      h1{
+        font-size: 50px;
+        text-shadow: 2px 0px rgb(226, 102, 0);
+        font-size:60px;
+        margin-bottom: 0px;
+      }
+      header{
+        padding: 20px;
+        background-color:  rgb(226, 192, 148);
+      }
+      nav ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        margin: 10px 0;
+      }
+      nav a{
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+      }
+      article img {
+    width: 100%;
+    height: auto;}
+
+    footer{ 
+        padding: 15px;
+        position: relative;
+        background-color: rgb(226, 192, 148);
+        color:white;
+        text-align: center;
+       
+    }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Cardápio</h1> 
+<nav>
+    <ul>
+        <li><a href="#massas">Massas</a></li>
+        <li><a href="#sobremesas">Sobremesas</a></li>
+        <li><a href="#tipicos">Típicos Brasileiros</a></li>
+    </ul>
+</nav>   
+    </header>
+    <main>
+        <section id="massas">
+            <h2>Massas</h2>
+            <article>
+                <img src="carbonara.jpg" alt="Prato de Carbonara" height="300px" width="400px">
+                <h3>Carbonara</h3>
+                <p>Tradicional prato italiano, preparado com massa, ovos, queijo parmesão, bacon e pimenta preta.</p>
+                <p>Preço: R$ 35,00</p>
+            </article>
+            <article>
+                <img src="pizza.jpg" alt="Prato de Pizza" height="300px" width="400px">
+                <h3>Pizza</h3>
+                <p>Pizza artesanal com uma crosta fina e ingredientes frescos, disponível em diversos sabores.</p>
+                <p>Preço: R$ 45,00</p>
+            </article>
+            <article>
+                <img src="macarronada.jpg" alt="Prato de Macarronada" height="300px" width="400px">
+                <h3>Macarronada</h3>
+                <p>Macarrão ao molho de tomate caseiro, servido com carne moída e queijo ralado.</p>
+                <p>Preço: R$ 40,00</p>
+            </article>
+        </section>
+        <section id="sobremesas">
+            <h2>Sobremesas</h2>
+            <article>
+                <img src="brigadeiro.jpg" alt="Brigadeiro" height="300px" width="400px">
+                <h3>Brigadeiro</h3>
+                <p>Doce brasileiro feito com leite condensado, chocolate e granulado.</p>
+                <p>Preço: R$ 10,00</p>
+            </article>
+            <article>
+                <img src="pudim.jpg" alt="Pudim" height="300px" width="400px">
+                <h3>Pudim</h3>
+                <p>Delicioso pudim de leite condensado com calda de caramelo.</p>
+                <p>Preço: R$ 15,00</p>
+            </article>
+            <article>
+                <img src="mousse.jpg" alt="Mousse de Maracujá" height="300px" width="400px">
+                <h3>Mousse de Maracujá</h3>
+                <p>Sobremesa cremosa e refrescante, feita com maracujá natural.</p>
+                <p>Preço: R$ 12,00</p>
+            </article>
+        </section>
+
+        <section id="tipicos">
+            <h2>Típicos Brasileiros</h2>
+            <article>
+                <img src="feijoada.jpg" alt="Feijoada" height="300px" width="400px">
+                <h3>Feijoada</h3>
+                <p>Prato tradicional brasileiro, preparado com feijão preto e carnes suínas.</p>
+                <p>Preço: R$ 50,00</p>
+            </article>
+            <article>
+                <img src="moqueca.jpg" alt="Moqueca" height="300px" width="400px">
+                <h3>Moqueca</h3>
+                <p>Ensopado de peixe e frutos do mar com leite de coco e dendê.</p>
+                <p>Preço: R$ 55,00</p>
+            </article>
+            <article>
+                <img src="acaraje.jpg" alt="Acarajé" height="300px" width="400px">
+                <h3>Acarajé</h3>
+                <p>Bolinho de feijão-fradinho frito no azeite de dendê, recheado com vatapá e camarão.</p>
+                <p>Preço: R$ 20,00</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>© Restaurante 2024</p>
+    </footer>
+</body>
+</html>
