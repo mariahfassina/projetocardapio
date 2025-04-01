@@ -1,88 +1,112 @@
 /* Estilos Globais */
 body {
-  background-color: rgb(255, 255, 255); /* Define a cor de fundo como branco */
-  font-family: Georgia, 'Times New Roman', Times, serif; /* Define a fonte da página */
-  margin: 0; /* Remove a margem padrão */
-  padding: 0; /* Remove o preenchimento padrão */
-  box-sizing: border-box; /* Ajusta o box-model para incluir bordas e padding no cálculo do tamanho */
+  background-color: rgb(255, 255, 255);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Estilos para o título principal (h1) */
 h1 {
-  text-shadow: 2px 0px rgb(226, 102, 0); /* Aplica sombra no texto */
-  font-size: 60px; /* Define o tamanho da fonte */
-  margin-bottom: 0px; /* Remove a margem inferior */
+  text-shadow: 2px 0px rgb(226, 102, 0);
+  font-size: 60px;
+  margin-bottom: 0px;
+}
+h1 a {
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit; /* Herda a cor do texto do título */
 }
 
 /* Estilos para os títulos das seções (h2) */
 h2 {
-  color: rgb(226, 102, 0); /* Define a cor laranja para o texto */
-  text-align: center; /* Alinha o texto ao centro */
-  font-size: 40px; /* Define o tamanho da fonte */
+  color: rgb(226, 102, 0);
+  text-align: center;
+  font-size: 40px;
 }
 
 /* Estilos para o cabeçalho */
 header {
-  padding: 20px; /* Adiciona preenchimento ao redor do conteúdo */
-  background-color: rgb(226, 192, 148); /* Cor de fundo do cabeçalho */
+  padding: 20px;
+  background-color: rgb(226, 192, 148);
 }
 
 /* Estilos para a lista de navegação */
 nav ul {
-  list-style: none; /* Remove os marcadores da lista */
-  padding: 0; /* Remove o padding da lista */
-  display: flex; /* Exibe os itens da lista de forma horizontal */
-  justify-content: space-around; /* Espalha os itens de forma uniforme */
-  margin: 10px 0; /* Define margens em cima e embaixo */
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
 }
 
 /* Estilos para os links de navegação */
 nav a {
-  text-decoration: none; /* Remove o sublinhado dos links */
-  color: black; /* Define a cor preta para os links */
-  font-size: 20px; /* Define o tamanho da fonte dos links */
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+/* Filtro de opções (dropdown) */
+#filtro-opcoes {
+  display: none;
+  position: absolute;
+  background-color: rgb(226, 192, 148);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#filtro-opcoes ul {
+  list-style: none;
+  padding: 0;
+}
+
+#filtro-opcoes li {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+#filtro-opcoes li:hover {
+  background-color: #f2f2f2;
 }
 
 /* Estilos para as imagens dentro dos artigos */
 article img {
-  width: 100%; /* A imagem ocupa toda a largura do seu contêiner */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 100%;
+  height: auto;
 }
 
 /* Estilos para o rodapé */
 footer {
-  padding: 15px; /* Adiciona preenchimento ao redor do conteúdo */
-  position: relative; /* Define o posicionamento relativo */
-  background-color: rgb(226, 192, 148); /* Cor de fundo do rodapé */
-  color: white; /* Cor do texto do rodapé */
-  text-align: center; /* Alinha o texto ao centro */
+  padding: 15px;
+  position: relative;
+  background-color: rgb(226, 192, 148);
+  color: white;
+  text-align: center;
 }
 
 /* Media Queries: Adaptações para diferentes tamanhos de tela */
-
-/* Para telas com largura mínima de 768px (ex: tablets e desktops) */
 @media (min-width: 768px) {
   main {
-      display: block; /* Define a exibição do main como bloco */
-      flex-wrap: wrap; /* Permite que os artigos quebrem a linha */
+    display: block;
   }
   article {
-      width: 50%; /* Define que cada artigo ocupará metade da largura da tela */
-      margin-bottom: 30px; /* Adiciona uma margem embaixo dos artigos */
-      margin: 0 auto 30px auto; /* Centraliza os artigos horizontalmente e adiciona margem embaixo */
+    width: 50%;
+    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
   }
 }
 
-/* Para telas com largura máxima de 300px (dispositivos muito pequenos) */
 @media (max-width: 300px) {
   main {
-      display: block; /* Define a exibição do main como bloco */
-      flex-wrap: wrap; /* Permite que os artigos quebrem a linha */
+    display: block;
+    flex-wrap: wrap;
   }
   article {
-      width: 100%; /* Faz com que cada artigo ocupe 100% da largura da tela */
+    width: 100%;
   }
   article img {
-      width: 100%; /* Ajusta a imagem para ocupar toda a largura do artigo */
+    width: 100%;
   }
 }

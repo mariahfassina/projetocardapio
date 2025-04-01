@@ -1,0 +1,32 @@
+{
+    "massas": [
+        {
+            "nome": "Carbonara",
+            "imagem": "carbonara.jpg",
+            "descricao": "Tradicional prato italiano, preparado com massa, ovos, queijo parmesão, bacon e pimenta preta.",
+            "preco": "R$ 35,00"
+        },
+        {
+            "nome": "Pizza",
+            "imagem": "pizza.jpg",
+            "descricao": "Pizza artesanal com uma crosta fina e ingredientes frescos, disponível em diversos sabores.",
+            "preco": "R$ 45,00"
+        }
+    ],
+    "sobremesas": [
+        {
+            "nome": "Brigadeiro",
+            "imagem": "brigadeiro.jpg",
+            "descricao": "Doce brasileiro feito com leite condensado, chocolate e granulado.",
+            "preco": "R$ 10,00"
+        }
+    ],
+    "tipicos": [
+        {
+            "nome": "Feijoada",
+            "imagem": "feijoada.jpg",
+            "descricao": "Prato tradicional brasileiro, preparado com feijão preto e carnes suínas.",
+            "preco": "R$ 50,00"
+        }
+    ]
+}

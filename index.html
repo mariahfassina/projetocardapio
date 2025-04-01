@@ -1,226 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio</title>
-    <!-- Link para o arquivo CSS que irá estilizar o cardápio -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    <!-- Cabeçalho do site, contendo o título e a navegação -->
+<body>
     <header>
-        <h1>Cardápio</h1>
-        <nav>
-            <ul>
-                <!-- Links de navegação para as seções de Massas, Sobremesas e Típicos Brasileiros -->
-                <li><a href="#massas">Massas</a></li>
-                <li><a href="#sobremesas">Sobremesas</a></li>
-                <li><a href="#tipicos">Típicos Brasileiros</a></li>
+        <h1><a href="#topo">Cardápio do Futuro</a></h1>
+        <nav aria-label="Navegação do cardápio">
+            <ul role="menu">
+                <li role="menumassas"><a href="#massas">Massas</a></li>
+                <li role="menusobremesas"><a href="#sobremesas">Sobremesas</a></li>
+                <li role="menutipicos"><a href="#tipicos">Típicos Brasileiros</a></li>
+                <!-- Filtro dropdown -->
+                <li role="menufiltro">
+                    <a href="javascript:void(0);" id="filtro">Filtrar</a>
+                    <div id="filtro-opcoes" class="filtro-opcoes">
+                        <ul>
+                            <li id="filtrar-massas">Massas</li>
+                            <li id="filtrar-sobremesas">Sobremesas</li>
+                            <li id="filtrar-tipicos">Típicos Brasileiros</li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
-    
+
     <main>
-        <!-- Seção de Massas -->
-        <section id="massas">
-            <h2>Massas</h2>
-    
-            <!-- Container onde os artigos de Massas serão inseridos pelo JavaScript -->
-            <div id="menu-massas">
-                <!-- Artigos de Massas serão gerados dinamicamente aqui -->
-            </div>
-    
-            <script>
-                // Lista de pratos de Massas com nome, imagem, descrição e preço
-                const pratosMassas = [
-                    {
-                        nome: "Carbonara",
-                        imagem: "carbonara.jpg",
-                        descricao: "Tradicional prato italiano, preparado com massa, ovos, queijo parmesão, bacon e pimenta preta.",
-                        preco: "R$ 35,00"
-                    },
-                    {
-                        nome: "Pizza",
-                        imagem: "pizza.jpg",
-                        descricao: "Pizza artesanal com uma crosta fina e ingredientes frescos, disponível em diversos sabores.",
-                        preco: "R$ 45,00"
-                    },
-                    {
-                        nome: "Macarronada",
-                        imagem: "macarronada.jpg",
-                        descricao: "Macarrão ao molho de tomate caseiro, servido com carne moída e queijo ralado.",
-                        preco: "R$ 40,00"
-                    },
-                    {
-                        nome: "Lasanha",
-                        imagem: "lasanha.jpg",
-                        descricao: "Camadas de massa intercaladas com molho de carne, queijo e molho branco.",
-                        preco: "R$ 48,00"
-                    }
-                ];
-    
-                // Função para gerar os artigos de Massas dinamicamente
-                function gerarMenuMassas(pratos) {
-                    const container = document.getElementById('menu-massas');
-                    
-                    // Para cada prato na lista de Massas, criamos um artigo
-                    pratos.forEach(prato => {
-                        const artigo = document.createElement('article');
-                        
-                        // Adicionamos o conteúdo (imagem, nome, descrição e preço) no artigo
-                        artigo.innerHTML = `
-                            <img src="${prato.imagem}" alt="Prato de ${prato.nome}">
-                            <h3>${prato.nome}</h3>
-                            <p>${prato.descricao}</p>
-                            <p>Preço: ${prato.preco}</p>
-                        `;
-                        
-                        // Adiciona o artigo gerado ao container
-                        container.appendChild(artigo);
-                    });
-                }
-    
-                // Chama a função para gerar os pratos de Massas
-                gerarMenuMassas(pratosMassas);
-            </script>
+        <section id="massas" aria-labelledby="titulo-massas">
+            <h2 id="titulo-massas">Massas</h2>
+            <div id="menu-massas" class="menu-container"></div>
         </section>
-    
-        <!-- Seção de Sobremesas -->
-        <section id="sobremesas">
-            <h2>Sobremesas</h2>
-    
-            <!-- Container onde os artigos de Sobremesas serão inseridos pelo JavaScript -->
-            <div id="menu-sobremesas">
-                <!-- Artigos de Sobremesas serão gerados dinamicamente aqui -->
-            </div>
-    
-            <script>
-                // Lista de pratos de Sobremesas
-                const pratosSobremesas = [
-                    {
-                        nome: "Brigadeiro",
-                        imagem: "brigadeiro.jpg",
-                        descricao: "Doce brasileiro feito com leite condensado, chocolate e granulado.",
-                        preco: "R$ 10,00"
-                    },
-                    {
-                        nome: "Pudim",
-                        imagem: "pudim.jpg",
-                        descricao: "Delicioso pudim de leite condensado com calda de caramelo.",
-                        preco: "R$ 15,00"
-                    },
-                    {
-                        nome: "Mousse de Maracujá",
-                        imagem: "mousse.jpg",
-                        descricao: "Sobremesa cremosa e refrescante, feita com maracujá natural.",
-                        preco: "R$ 12,00"
-                    },
-                    {
-                        nome: "Tiramisù",
-                        imagem: "tiramisu.jpg",
-                        descricao: "Clássica sobremesa italiana feita com camadas de biscoito champagne, café e creme de mascarpone.",
-                        preco: "R$ 18,00"
-                    }
-                ];
-    
-                // Função para gerar os artigos de Sobremesas dinamicamente
-                function gerarMenuSobremesas(pratos) {
-                    const container = document.getElementById('menu-sobremesas');
-                    
-                    // Para cada prato na lista de Sobremesas, criamos um artigo
-                    pratos.forEach(prato => {
-                        const artigo = document.createElement('article');
-                        
-                        // Adicionamos o conteúdo (imagem, nome, descrição e preço) no artigo
-                        artigo.innerHTML = `
-                            <img src="${prato.imagem}" alt="Prato de ${prato.nome}">
-                            <h3>${prato.nome}</h3>
-                            <p>${prato.descricao}</p>
-                            <p>Preço: ${prato.preco}</p>
-                        `;
-                        
-                        // Adiciona o artigo gerado ao container
-                        container.appendChild(artigo);
-                    });
-                }
-    
-                // Chama a função para gerar os pratos de Sobremesas
-                gerarMenuSobremesas(pratosSobremesas);
-            </script>
+
+        <section id="sobremesas" aria-labelledby="titulo-sobremesas">
+            <h2 id="titulo-sobremesas">Sobremesas</h2>
+            <div id="menu-sobremesas" class="menu-container"></div>
         </section>
-    
-        <!-- Seção de Típicos Brasileiros -->
-        <section id="tipicos">
-            <h2>Típicos Brasileiros</h2>
-    
-            <!-- Container onde os artigos de Típicos Brasileiros serão inseridos pelo JavaScript -->
-            <div id="menu-tipicos">
-                <!-- Artigos de Típicos Brasileiros serão gerados dinamicamente aqui -->
-            </div>
-    
-            <script>
-                // Lista de pratos típicos brasileiros
-                const pratosTipicos = [
-                    {
-                        nome: "Feijoada",
-                        imagem: "feijoada.jpg",
-                        descricao: "Prato tradicional brasileiro, preparado com feijão preto e carnes suínas.",
-                        preco: "R$ 50,00"
-                    },
-                    {
-                        nome: "Moqueca",
-                        imagem: "moqueca.jpg",
-                        descricao: "Ensopado de peixe e frutos do mar com leite de coco e dendê.",
-                        preco: "R$ 55,00"
-                    },
-                    {
-                        nome: "Acarajé",
-                        imagem: "acaraje.jpg",
-                        descricao: "Bolinho de feijão-fradinho frito no azeite de dendê, recheado com vatapá e camarão.",
-                        preco: "R$ 20,00"
-                    },
-                    {
-                        nome: "Baião de Dois",
-                        imagem: "baiao.jpg",
-                        descricao: "Tradicional prato nordestino feito com arroz, feijão verde, queijo coalho e carne seca.",
-                        preco: "R$ 38,00"
-                    }
-                ];
-    
-                // Função para gerar os artigos de Típicos Brasileiros dinamicamente
-                function gerarMenuTipicos(pratos) {
-                    const container = document.getElementById('menu-tipicos');
-                    
-                    // Para cada prato na lista de Típicos Brasileiros, criamos um artigo
-                    pratos.forEach(prato => {
-                        const artigo = document.createElement('article');
-                        
-                        // Adicionamos o conteúdo (imagem, nome, descrição e preço) no artigo
-                        artigo.innerHTML = `
-                            <img src="${prato.imagem}" alt="Prato de ${prato.nome}">
-                            <h3>${prato.nome}</h3>
-                            <p>${prato.descricao}</p>
-                            <p>Preço: ${prato.preco}</p>
-                        `;
-                        
-                        // Adiciona o artigo gerado ao container
-                        container.appendChild(artigo);
-                    });
-                }
-    
-                // Chama a função para gerar os pratos de Típicos Brasileiros
-                gerarMenuTipicos(pratosTipicos);
-            </script>
+
+        <section id="tipicos" aria-labelledby="titulo-tipicos">
+            <h2 id="titulo-tipicos">Típicos Brasileiros</h2>
+            <div id="menu-tipicos" class="menu-container"></div>
         </section>
-    
     </main>
-    
-    <!-- Rodapé com informações de copyright -->
+
     <footer>
         <p>&copy; 2025 Restaurante</p>
     </footer>
-    
+
+    <script src="script.js"></script>
 </body>
+
 </html>
