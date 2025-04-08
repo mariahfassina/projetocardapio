@@ -7,10 +7,16 @@
             "preco": "R$ 35,00"
         },
         {
-            "nome": "Pizza",
+            "nome": "Pizza Margherita",
             "imagem": "pizza.jpg",
-            "descricao": "Pizza artesanal com uma crosta fina e ingredientes frescos, disponível em diversos sabores.",
+            "descricao": "Pizza artesanal com molho de tomate, muçarela, manjericão fresco e azeite de oliva.",
             "preco": "R$ 45,00"
+        },
+        {
+            "nome": "Lasanha à Bolonhesa",
+            "imagem": "lasanha.jpg",
+            "descricao": "Camadas de massa com carne moída, molho de tomate e muito queijo.",
+            "preco": "R$ 40,00"
         }
     ],
     "sobremesas": [
@@ -19,6 +25,18 @@
             "imagem": "brigadeiro.jpg",
             "descricao": "Doce brasileiro feito com leite condensado, chocolate e granulado.",
             "preco": "R$ 10,00"
+        },
+        {
+            "nome": "Pudim",
+            "imagem": "pudim.jpg",
+            "descricao": "Sobremesa cremosa de leite condensado com calda de caramelo.",
+            "preco": "R$ 12,00"
+        },
+        {
+            "nome": "Mousse de Maracujá",
+            "imagem": "mousse.jpg",
+            "descricao": "Mousse leve e refrescante feita com suco natural de maracujá.",
+            "preco": "R$ 14,00"
         }
     ],
     "tipicos": [
@@ -27,6 +45,18 @@
             "imagem": "feijoada.jpg",
             "descricao": "Prato tradicional brasileiro, preparado com feijão preto e carnes suínas.",
             "preco": "R$ 50,00"
+        },
+        {
+            "nome": "Acarajé",
+            "imagem": "acaraje.jpg",
+            "descricao": "Bolinhos fritos de feijão-fradinho recheados com vatapá, camarão e salada.",
+            "preco": "R$ 25,00"
+        },
+        {
+            "nome": "Moqueca Baiana",
+            "imagem": "moqueca.jpg",
+            "descricao": "Ensopado de peixe com leite de coco, azeite de dendê, pimentões e coentro.",
+            "preco": "R$ 48,00"
         }
     ]
 }

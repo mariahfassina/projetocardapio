@@ -36,20 +36,22 @@ function carregarDadosJSON() {
 }
 
 // Função para atualizar o contador do carrinho
+// Atualiza o contador do carrinho
 function atualizarCarrinho() {
     const contadorCarrinho = document.getElementById('contador-carrinho');
     let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
     contadorCarrinho.textContent = carrinho.length;
 }
 
-// Função para adicionar ao carrinho
+// Adiciona ao carrinho e salva no localStorage
 function adicionarAoCarrinho(event) {
     if (event.target.classList.contains('add-to-cart')) {
         const prato = event.target.closest('article');
         const nomePrato = prato.querySelector('h3').textContent;
+        const precoPrato = prato.querySelector('p:nth-of-type(2)').textContent;
 
         let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-        carrinho.push(nomePrato);
+        carrinho.push({ nome: nomePrato, preco: precoPrato });
         localStorage.setItem('carrinho', JSON.stringify(carrinho));
 
         atualizarCarrinho();
@@ -73,19 +75,23 @@ document.getElementById('filtro').addEventListener('click', function () {
 
 // Seleção dos filtros
 document.getElementById('filtrar-massas').addEventListener('click', function () {
-    document.getElementById('menu-massas').style.display = 'block';
-    document.getElementById('menu-sobremesas').style.display = 'none';
-    document.getElementById('menu-tipicos').style.display = 'none';
+    document.getElementById('massas').style.display = 'block';
+    document.getElementById('sobremesas').style.display = 'none';
+    document.getElementById('tipicos').style.display = 'none';
+    document.getElementById('filtro-opcoes').style.display = 'none';
 });
 
 document.getElementById('filtrar-sobremesas').addEventListener('click', function () {
-    document.getElementById('menu-sobremesas').style.display = 'block';
-    document.getElementById('menu-massas').style.display = 'none';
-    document.getElementById('menu-tipicos').style.display = 'none';
+    document.getElementById('sobremesas').style.display = 'block';
+    document.getElementById('massas').style.display = 'none';
+    document.getElementById('tipicos').style.display = 'none';
+    document.getElementById('filtro-opcoes').style.display = 'none';
 });
 
 document.getElementById('filtrar-tipicos').addEventListener('click', function () {
-    document.getElementById('menu-tipicos').style.display = 'block';
-    document.getElementById('menu-massas').style.display = 'none';
-    document.getElementById('menu-sobremesas').style.display = 'none';
+    document.getElementById('tipicos').style.display = 'block';
+    document.getElementById('massas').style.display = 'none';
+    document.getElementById('sobremesas').style.display = 'none';
+    document.getElementById('filtro-opcoes').style.display = 'none';
 });
+

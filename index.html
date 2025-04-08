@@ -11,24 +11,31 @@
 <body>
     <header>
         <h1><a href="#topo">Cardápio do Futuro</a></h1>
+        <div id="carrinho-container" aria-label="Carrinho de compras">
+            <span>🛒: <span id="contador-carrinho">0</span></span>
+        </div>
+        
         <nav aria-label="Navegação do cardápio">
             <ul role="menu">
                 <li role="menumassas"><a href="#massas">Massas</a></li>
                 <li role="menusobremesas"><a href="#sobremesas">Sobremesas</a></li>
                 <li role="menutipicos"><a href="#tipicos">Típicos Brasileiros</a></li>
-                <!-- Filtro dropdown -->
-                <li role="menufiltro">
-                    <a href="javascript:void(0);" id="filtro">Filtrar</a>
-                    <div id="filtro-opcoes" class="filtro-opcoes">
-                        <ul>
-                            <li id="filtrar-massas">Massas</li>
-                            <li id="filtrar-sobremesas">Sobremesas</li>
-                            <li id="filtrar-tipicos">Típicos Brasileiros</li>
-                        </ul>
-                    </div>
-                </li>
+               
+
             </ul>
         </nav>
+         <!-- Filtro dropdown -->
+        <ul role="filtro">
+            <li role="menufiltro">
+                <a href="javascript:void(0);" id="filtro">Filtrar</a>
+                <div id="filtro-opcoes" class="filtro-opcoes">
+                    <ul>
+                        <li id="filtrar-massas">Massas</li>
+                        <li id="filtrar-sobremesas">Sobremesas</li>
+                        <li id="filtrar-tipicos">Típicos Brasileiros</li>
+                    </ul>
+                </div>
+            </li>
     </header>
 
     <main>
